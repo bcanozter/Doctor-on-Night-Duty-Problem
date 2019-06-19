@@ -140,7 +140,7 @@ int main(int argc, const char * argv[]) {
     srand(time(NULL));  //Random number for threads to sleep
     
     /*
-     Information available for user
+     Wait for user input
      */
     std::cout << "Please enter number of patients: ";
     
@@ -156,8 +156,6 @@ int main(int argc, const char * argv[]) {
 
     sem_patients = dispatch_semaphore_create(0);
     sem_doctor =  dispatch_semaphore_create(1);
-    //sem_init(&s_patients,0,0); //Semaphore initialize
-    //sem_init(&s_doctor,0,1);   //Semaphore initialize
     
     pthread_mutex_init(&mutex_lock, NULL); //Mutex initialize
     
